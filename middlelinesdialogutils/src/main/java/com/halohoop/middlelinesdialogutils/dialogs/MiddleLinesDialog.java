@@ -379,7 +379,7 @@ public class MiddleLinesDialog extends Dialog implements
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    itemClickListener.onClick(position);
+                    itemClickListener.onClick(position, mResIdDialogBelongTo);
                     dismiss();
                 }
             });
