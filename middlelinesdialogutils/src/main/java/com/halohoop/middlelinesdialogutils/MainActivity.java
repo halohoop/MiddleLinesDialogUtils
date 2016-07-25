@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
     }
 
     @Override
-    public void onClick(int position) {
+    public void onClick(int position, int resIdDialogBelongTo) {
         Log.i("Halohoop", position + "根据position来区分点击了哪一个");
     }
 
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
                 0.30f, "42B0FF",//对话框背景的透明度和颜色十六进制代码
                 0.50f, "0000ff", //每个item之间的分割线透明度和颜色十六进制代码
                 1.0f, "000000",//每行textview的透明度和颜色十六进制代码
-                Gravity.LEFT,50,//每行textview的gravity 如果是left就是paddingLeft,如果是Right,就是paddingRight
+                Gravity.LEFT, 50,//每行textview的gravity 如果是left就是paddingLeft,如果是Right,就是paddingRight
                 this,//点击监听回调
                 this,//对话框取消监听回调
                 //以下为设置每一行的文字
@@ -71,4 +71,5 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
     public void onCancel(DialogInterface dialog) {
         Log.i("Halohoop", "取消对话框了 cancel");
     }
+
 }
