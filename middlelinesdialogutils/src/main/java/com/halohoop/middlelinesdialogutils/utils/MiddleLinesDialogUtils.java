@@ -11,71 +11,71 @@ import com.halohoop.middlelinesdialogutils.dialogs.MiddleLinesDialog;
  */
 public class MiddleLinesDialogUtils {
 
-    public static void show(Context context, ItemClickListener itemClickListener,
+    public static void show(int resIdDialogBelongTo, Context context, ItemClickListener itemClickListener,
                             String... texts) {
-        new MiddleLinesDialog(context, itemClickListener, texts).show();
+        new MiddleLinesDialog(resIdDialogBelongTo, context, itemClickListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight,
                             ItemClickListener itemClickListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemClickListener, texts).show();
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemClickListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             ItemClickListener itemClickListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown, itemClickListener,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown, itemClickListener,
                 texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int radius, ItemClickListener itemClickListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown, radius,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown, radius,
                 itemClickListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                             ItemClickListener itemClickListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius, itemClickListener,
                 null, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                             ItemClickListener itemClickListener,
                             DialogInterface.OnCancelListener cancelListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius, itemClickListener,
                 cancelListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                             int crossMarginLeftAndRight,
                             ItemClickListener itemClickListener,
                             DialogInterface.OnCancelListener cancelListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 itemClickListener,
                 cancelListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                             int crossMarginLeftAndRight,
                             float dialogBgAlpha, String dialogBgColorHex,
                             ItemClickListener itemClickListener,
                             DialogInterface.OnCancelListener cancelListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 dialogBgAlpha, dialogBgColorHex,
@@ -83,7 +83,7 @@ public class MiddleLinesDialogUtils {
                 cancelListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                             int crossMarginLeftAndRight,
                             float dialogBgAlpha, String dialogBgColorHex,
@@ -91,7 +91,7 @@ public class MiddleLinesDialogUtils {
                             ItemClickListener itemClickListener,
                             DialogInterface.OnCancelListener cancelListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 dialogBgAlpha, dialogBgColorHex,
@@ -100,7 +100,7 @@ public class MiddleLinesDialogUtils {
                 cancelListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                             int crossMarginLeftAndRight,
                             float dialogBgAlpha, String dialogBgColorHex,
@@ -109,7 +109,7 @@ public class MiddleLinesDialogUtils {
                             ItemClickListener itemClickListener,
                             DialogInterface.OnCancelListener cancelListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 dialogBgAlpha, dialogBgColorHex,
@@ -119,7 +119,7 @@ public class MiddleLinesDialogUtils {
                 cancelListener, texts).show();
     }
 
-    public static void show(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public static void show(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                             int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                             int crossMarginLeftAndRight,
                             float dialogBgAlpha, String dialogBgColorHex,
@@ -129,7 +129,7 @@ public class MiddleLinesDialogUtils {
                             ItemClickListener itemClickListener,
                             DialogInterface.OnCancelListener cancelListener,
                             String... texts) {
-        new MiddleLinesDialog(context, marginLeftAndRight, itemPaddingTopAndDown,
+        new MiddleLinesDialog(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 dialogBgAlpha, dialogBgColorHex,

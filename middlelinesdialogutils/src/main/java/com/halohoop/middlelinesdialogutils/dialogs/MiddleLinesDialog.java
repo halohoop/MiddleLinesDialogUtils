@@ -59,6 +59,7 @@ public class MiddleLinesDialog extends Dialog implements
     private Context mContext;
     private Point mScreenSize;
     private List<String> tvTextList = new ArrayList<>();
+    private int mResIdDialogBelongTo;
 
     /**
      * 这个构造函数的文字参数,由外界传入,采用的是不定参数的形式,其实就是一个数组,
@@ -68,65 +69,65 @@ public class MiddleLinesDialog extends Dialog implements
      * @param itemClickListener
      * @param texts
      */
-    public MiddleLinesDialog(Context context, ItemClickListener itemClickListener,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context, ItemClickListener itemClickListener,
                              String... texts) {
-        this(context,
+        this(resIdDialogBelongTo, context,
                 DEFAULT_MARGIN_LEFT_AND_RIGHT, DEFAULT_ITEM_PADDING_TOP_AND_DOWN,
                 DEFAULT_RADOIS, DEFAULT_RADOIS,
                 itemClickListener,
                 null, texts);
     }
 
-    public MiddleLinesDialog(Context context,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context,
                              int marginLeftAndRight,
                              ItemClickListener itemClickListener,
                              String... texts) {
-        this(context,
+        this(resIdDialogBelongTo, context,
                 marginLeftAndRight, DEFAULT_ITEM_PADDING_TOP_AND_DOWN,
                 DEFAULT_RADOIS, DEFAULT_RADOIS,
                 itemClickListener,
                 null, texts);
     }
 
-    public MiddleLinesDialog(Context context,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context,
                              int marginLeftAndRight, int itemPaddingTopAndDown,
                              ItemClickListener itemClickListener,
                              String... texts) {
-        this(context,
+        this(resIdDialogBelongTo, context,
                 marginLeftAndRight, itemPaddingTopAndDown,
                 DEFAULT_RADOIS, DEFAULT_RADOIS,
                 itemClickListener,
                 null, texts);
     }
 
-    public MiddleLinesDialog(Context context,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context,
                              int marginLeftAndRight, int itemPaddingTopAndDown, int radius,
                              ItemClickListener itemClickListener,
                              String... texts) {
-        this(context,
+        this(resIdDialogBelongTo, context,
                 marginLeftAndRight, itemPaddingTopAndDown,
                 radius, radius,
                 itemClickListener,
                 null, texts);
     }
 
-    public MiddleLinesDialog(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                              int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                              ItemClickListener itemClickListener,
                              OnCancelListener cancelListener, String... texts) {
-        this(context, marginLeftAndRight, itemPaddingTopAndDown,
+        this(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 DEFAULT_CROSS_MARGIN_LEFT_AND_RIGHT,
                 itemClickListener,
                 cancelListener, texts);
     }
 
-    public MiddleLinesDialog(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                              int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                              int crossMarginLeftAndRight,
                              ItemClickListener itemClickListener,
                              OnCancelListener cancelListener, String... texts) {
-        this(context, marginLeftAndRight, itemPaddingTopAndDown,
+        this(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 DEFAULT_DIALOG_BG_ALPHA, DEFAULT_DIALOG_BG_COLOR_HEX,
@@ -147,13 +148,13 @@ public class MiddleLinesDialog extends Dialog implements
      * @param cancelListener
      * @param texts
      */
-    public MiddleLinesDialog(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                              int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                              int crossMarginLeftAndRight,
                              float dialogBgAlpha, String dialogBgColorHex,
                              ItemClickListener itemClickListener,
                              OnCancelListener cancelListener, String... texts) {
-        this(context, marginLeftAndRight, itemPaddingTopAndDown,
+        this(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 dialogBgAlpha, dialogBgColorHex,
@@ -177,14 +178,14 @@ public class MiddleLinesDialog extends Dialog implements
      * @param cancelListener
      * @param texts
      */
-    public MiddleLinesDialog(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                              int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                              int crossMarginLeftAndRight,
                              float dialogBgAlpha, String dialogBgColorHex,
                              float crossColorAlpha, String crossColorHex,
                              ItemClickListener itemClickListener,
                              OnCancelListener cancelListener, String... texts) {
-        this(context, marginLeftAndRight, itemPaddingTopAndDown,
+        this(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 dialogBgAlpha, dialogBgColorHex,
@@ -212,7 +213,7 @@ public class MiddleLinesDialog extends Dialog implements
      * @param cancelListener
      * @param texts
      */
-    public MiddleLinesDialog(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                              int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                              int crossMarginLeftAndRight,
                              float dialogBgAlpha, String dialogBgColorHex,
@@ -220,7 +221,7 @@ public class MiddleLinesDialog extends Dialog implements
                              float textColorAlpha, String textColorHex,
                              ItemClickListener itemClickListener,
                              OnCancelListener cancelListener, String... texts) {
-        this(context, marginLeftAndRight, itemPaddingTopAndDown,
+        this(resIdDialogBelongTo, context, marginLeftAndRight, itemPaddingTopAndDown,
                 topLeftAndRightRadius, bottomLeftAndRightRadius,
                 crossMarginLeftAndRight,
                 dialogBgAlpha, dialogBgColorHex,
@@ -254,7 +255,7 @@ public class MiddleLinesDialog extends Dialog implements
      * @param texts                    自定义的文字,不定参数,需要什么通过:"xxxx1","xxxx2","xxxx3","xxxxN"...往后加
      *                                 而且这个参数必须要在最后,因为是不定参数;
      */
-    public MiddleLinesDialog(Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
+    public MiddleLinesDialog(int resIdDialogBelongTo, Context context, int marginLeftAndRight, int itemPaddingTopAndDown,
                              int topLeftAndRightRadius, int bottomLeftAndRightRadius,
                              int crossMarginLeftAndRight,
                              float dialogBgAlpha, String dialogBgColorHex,
@@ -264,6 +265,7 @@ public class MiddleLinesDialog extends Dialog implements
                              ItemClickListener itemClickListener,
                              OnCancelListener cancelListener, String... texts) {
         super(context, true, cancelListener);
+        this.mResIdDialogBelongTo = resIdDialogBelongTo;
         this.mContext = context;
         mScreenSize = getScreenSize(context);
         this.mMarginLeftAndRight = marginLeftAndRight;
@@ -475,13 +477,6 @@ public class MiddleLinesDialog extends Dialog implements
                 mScreenSize.x - mMarginLeftAndRight - mMarginLeftAndRight,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
         textView.setLayoutParams(layoutParams);
-        if (Gravity.LEFT == gravity) {
-            textView.setPadding(mPaddingLeftOrRight, mItemPaddingTopAndDown, 0, mItemPaddingTopAndDown);
-        } else if (Gravity.RIGHT == gravity) {
-            textView.setPadding(0, mItemPaddingTopAndDown, mPaddingLeftOrRight, mItemPaddingTopAndDown);
-        } else {
-            textView.setPadding(0, mItemPaddingTopAndDown, 0, mItemPaddingTopAndDown);
-        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             textView.setBackground(newSelector(
                     android.R.color.transparent,
@@ -496,6 +491,13 @@ public class MiddleLinesDialog extends Dialog implements
                     android.R.color.transparent,
                     android.R.color.transparent,
                     index, size));
+        }
+        if (Gravity.LEFT == gravity) {
+            textView.setPadding(mPaddingLeftOrRight, mItemPaddingTopAndDown, 0, mItemPaddingTopAndDown);
+        } else if (Gravity.RIGHT == gravity) {
+            textView.setPadding(0, mItemPaddingTopAndDown, mPaddingLeftOrRight, mItemPaddingTopAndDown);
+        } else {
+            textView.setPadding(0, mItemPaddingTopAndDown, 0, mItemPaddingTopAndDown);
         }
         textView.setText(text);
         return textView;
