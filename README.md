@@ -1,3 +1,5 @@
+## no more updates,please move to 
+* "https://github.com/halohoop/MiddleLinesDialogUtils2.0"
 ## MiddleLinesDialogUtils
 
 Use just one line code to get a Custum Dialog in Android!
